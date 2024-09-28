@@ -14,6 +14,10 @@
 
 <body>
   <div class="container">
+    <ul class="skip-links">
+      <li><a href="#main-nav"></a></li>
+    </ul>
+  </div>
     <div class="site-header">
       <h1>Jam Box Studios</h1>
       <div class="main-nav">
@@ -23,8 +27,8 @@
           <li><a href="#">Reservation</a></li>
           <li><a href="#">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      </header>
+      <img src="https://placekitten.com/1200/900" class="banner" alt="image of a kitten">
     </div>
     <div class="main-content">
       <h1>Welcome to Jam Box</h1>
@@ -33,32 +37,37 @@
       <div class="owner">
         <h1>Meet the owner</h1>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="job">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
         <h1>Address</h1>
-        <p>
+        <p itemprop="address">
           Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+          <span itemprop="streetAddress">123 Guitar Road, </span>
+          <span itemprop="addressLocality">Musicville,</span> 
+          <span itemprop="addressCountry">Danceistan </span>
+          <span itemprop="postalCode">B3T 0L0 </span>
         </p>
       </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
     </div>
+      <div class="contact-section">
+        <section role="form" aria-label="contact-heading">
+          <h1 id="contact-heading">Contact Us</h1>
+          <form action="thanks.html">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Full Name">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Subject">
+            <label for="message">Your Message</label>
+            <textarea type="text" id="Message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </section>
+      </div>
     <div class="site-footer">
       &copy; 2021 Jam Box Studios
     </div>
